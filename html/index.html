@@ -145,6 +145,7 @@
             min-width: 1200px;
         }
         .nav {
+            position: relative;
             width: 960px;
             margin-left: auto;
             margin-right: auto;
@@ -180,66 +181,38 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .foot {
+            margin-top: 10px;
+            padding-bottom: 10px;
+            font-size: 12px;
+            color: #333;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-<!--<div class="top">-->
-    <!--<a href="#" class="logo">-->
-        <!--<img src="../assets/images/logo.jpg">-->
-    <!--</a>-->
-    <!--<div class="search">-->
-        <!--<div class="search-bd">-->
-            <!--<div class="search-input-wrap">-->
-                <!--<input type="text" class="search-input" placeholder="请输入游戏或点卡名称">-->
-            <!--</div>-->
-            <!--<a href="#" class="search-button" autofocus="autofocus">搜 索</a>-->
-        <!--</div>-->
-        <!--<div class="search-ft">-->
-            <!--<a href="#">PayPal</a>-->
-            <!--<a href="#">苹果卡</a>-->
-            <!--<a href="#">PSN</a>-->
-            <!--<a href="#">剑网三</a>-->
-            <!--<a href="#">mycard</a>-->
-            <!--<a href="#">代购</a>-->
-            <!--<a href="#">YY</a>-->
-            <!--<a href="#">战网</a>-->
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="service">-->
-        <!--<img src="../assets/images/kf2.png" height="58" width="120"/>-->
-        <!--<a href="#" class="service-qq"></a>-->
-        <!--<img src="../assets/images/pp.gif" height="44" width="44"/>-->
-    <!--</div>-->
-    <!--<div class="qr-wrap">关注公众号<br><img src="../assets/images/pc_314_wx.png" class="qr"></div>-->
-<!--</div>-->
 <div class="nav-wrap">
     <ul class="nav">
-        <li><a href="#" class="active">精修图</a></li>
-        <li><a href="#">艺术字设计</a></li>
-        <li><a href="#">视频学习</a></li>
-        <li><a href="#">产品设计</a></li>
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="jingxiutu.html">精修图</a></li>
+        <li><a href="yishuzisheji.html">艺术字设计</a></li>
+        <li><a href="shipinxuexi.html">视频学习</a></li>
+        <li><a href="chanpinsheji.html">产品设计</a></li>
+        <div style="position: absolute;right: 5px;line-height: 42px;"><a href="#" style="color: #fff;text-decoration: none">客服QQ : 375910913</a></div>
     </ul>
 </div>
 <div class="body">
     <div class="product">
         <div id="carouselExampleIndicators-product" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                <li data-target="#carouselExampleIndicators-product" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators-product" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators-product" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators-product" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="../assets/images/works1.jpg" alt="First slide">
-                    <!--<div class="carousel-caption d-none d-md-block">-->
-                        <!--<h5>1</h5>-->
-                        <!--<p>1</p>-->
-                    <!--</div>-->
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="../assets/images/works2.jpg" alt="">
@@ -247,24 +220,15 @@
                 <div class="carousel-item">
                     <img class="d-block w-100" src="../assets/images/works3.jpg" alt="">
                 </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/images/works4.jpg" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/images/works5.jpg" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/images/works6.jpg" alt="">
-                    </div>
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="../assets/images/works7.jpg" alt="">
-                    </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/images/works4.jpg" alt="">
+                </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators-product" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleIndicators-product" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -273,8 +237,8 @@
     <div class="master">
         <div id="carouselExampleIndicators-master" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators-master" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators-master" data-slide-to="1"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -284,18 +248,20 @@
                     <img class="d-block w-100" src="../assets/images/teacher2.jpg">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleIndicators-master" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleIndicators-master" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>
     </div>
 </div>
-
+<div class="foot">
+    科昂超能科技有限公司 | 2016 ~ 2018 | 客服QQ:375910913
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
