@@ -3,4 +3,5 @@
  */
 function f4() {
     var v = 'f4';
+    var v2 = 'f4';
 }
