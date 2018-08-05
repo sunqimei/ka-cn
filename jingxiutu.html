@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>精修图</title>
     <style>
@@ -14,6 +15,7 @@
             width: 100%;
             height: 100%;
         }
+
         .search-ft a {
             float: left;
             color: #777;
@@ -26,11 +28,13 @@
         .search-ft a:hover {
             color: #777;
         }
+
         .nav-wrap {
             height: 42px;
             background-color: #36a9e2;
             min-width: 1200px;
         }
+
         .nav {
             position: relative;
             width: 960px;
@@ -38,19 +42,21 @@
             margin-right: auto;
             overflow: hidden;
         }
+
         .nav li {
             float: left;
             margin: 0;
             padding: 0;
             list-style: none;
         }
+
         .nav li a {
             display: block;
             height: 42px;
             line-height: 42px;
             padding-left: 17px;
             padding-right: 17px;
-            font-family: "宋体",Verdana, Arial !important;
+            font-family: "宋体", Verdana, Arial !important;
             color: #fff;
             font-size: 14px;
             font-weight: 700;
@@ -58,7 +64,7 @@
         }
 
         .nav li a:hover,
-        .nav li a.active{
+        .nav li a.active {
             background-color: #0772a7;
         }
     </style>
@@ -68,6 +74,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .foot {
             margin-top: 10px;
             padding-bottom: 10px;
@@ -75,26 +82,31 @@
             color: #333;
             text-align: center;
         }
+
         .demand {
             overflow: hidden;
             margin-top: 10px;
             padding-bottom: 10px;
-            border: 1px solid #999;
             line-height: 1.5;
         }
+
         .demand-pic {
             padding: 10px;
             padding-bottom: 0;
         }
+
         .demand-desc {
             padding: 10px;
         }
+
         .demand label {
             display: block;
         }
+
         input[type='file'] {
 
         }
+
         textarea {
             width: 100%;
             height: 200px;
@@ -102,6 +114,57 @@
             border-bottom: 1px solid #999;
             outline: none;
             resize: none;
+        }
+    </style>
+    <style>
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #999;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        .demand {
+            flex-basis: 50%;
+            flex-grow: 1;
+        }
+
+        .price {
+            flex-grow: 1;
+            margin-top: 10px;
+            padding-left: 30px;
+            padding-right: 10px;
+        }
+
+        .price-main {
+            padding: 10px;
+            background-color: #ccc;
+        }
+
+        .price-main {
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .price-main span:first-of-type {
+            text-decoration: line-through;
+        }
+
+        .price-main span:last-of-type {
+            color: #f00;
+            font-size: 24px;
+        }
+
+        .price-num {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .price-handle {
+            text-align: center;
         }
     </style>
 </head>
@@ -114,7 +177,10 @@
         <li><a href="shipinxuexi.html">视频学习</a></li>
         <li><a href="chanpinsheji.html">产品设计</a></li>
         <li><a href="aboutus.html">关于我们</a></li>
-        <div style="position: absolute;right: 5px;line-height: 42px;"><a href="#" style="color: #fff;text-decoration: none">客服QQ : 546445830</a></div>
+        <div style="position: absolute;right: 5px;line-height: 42px;">
+            <a href="#" style="color: #fff;text-decoration: none">
+                客服QQ : 546445830</a>
+        </div>
     </ul>
 </div>
 <div class="body">
@@ -150,29 +216,40 @@
             </a>
         </div>
     </div>
-    <div class="demand">
-        <div class="demand-pic">
-            <label for="">上传图片 :</label>
-            <div>
-                <p>
-                    <input type="file" id="xdaTanFileImg" onchange="xmTanUploadImg(this)" accept="image/*"/>
-                    <!--<input type="button" value="隐藏图片" onclick="document.getElementById('xmTanImg').style.display = 'none';"/>-->
-                    <!--<input type="button" value="显示图片" onclick="document.getElementById('xmTanImg').style.display = 'block';"/>-->
-                </p>
-                <div><img id="xmTanImg" style="width: 100%"></div>
-                <div id="xmTanDiv"></div>
+    <div class="main">
+        <div class="demand">
+            <div class="demand-pic">
+                <label for="">上传图片 :</label>
+                <div>
+                    <p>
+                        <input type="file" id="xdaTanFileImg" onchange="xmTanUploadImg(this)" accept="image/*"/>
+                        <!--<input type="button" value="隐藏图片" onclick="document.getElementById('xmTanImg').style.display = 'none';"/>-->
+                        <!--<input type="button" value="显示图片" onclick="document.getElementById('xmTanImg').style.display = 'block';"/>-->
+                    </p>
+                    <div><img id="xmTanImg" style="width: 100%"></div>
+                    <div id="xmTanDiv"></div>
+                </div>
+            </div>
+            <div class="demand-desc">
+                <label for="">联系邮箱 :</label>
+                <input type="email" style="padding-left: 5px;width: 200px;">
+            </div>
+            <div class="demand-desc">
+                <label for="">需求描述 :</label>
+                <textarea></textarea>
             </div>
         </div>
-        <div class="demand-desc">
-            <label for="">联系邮箱 :</label>
-            <input type="email" style="padding-left: 5px;width: 200px;">
-        </div>
-        <div class="demand-desc">
-            <label for="">需求描述 :</label>
-            <textarea></textarea>
-        </div>
-        <div>
-            <input type="submit" style="margin-left: 10px">
+        <div class="price">
+            <div class="price-main">
+                <span>价格：￥1000/张</span><br>
+                <span class="">促销价：￥900/张 </span>
+            </div>
+            <div class="price-num">
+                总金额：￥900
+            </div>
+            <div class="price-handle">
+                <input type="submit" value="确认购买">
+            </div>
         </div>
     </div>
 </div>
@@ -182,9 +259,15 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 <script type="text/javascript">
     //判断浏览器是否支持FileReader接口
     if (typeof FileReader == 'undefined') {
@@ -197,7 +280,8 @@
     function xmTanUploadImg(obj) {
         var file = obj.files[0];
 
-        console.log(obj);console.log(file);
+        console.log(obj);
+        console.log(file);
         console.log("file.size = " + file.size);  //file.size 单位为byte
 
         var reader = new FileReader();
