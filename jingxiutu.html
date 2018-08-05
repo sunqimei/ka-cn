@@ -222,7 +222,7 @@
                 <label for="">上传图片 :</label>
                 <div>
                     <p>
-                        <input type="file" id="xdaTanFileImg" onchange="xmTanUploadImg(this)" accept="image/*"/>
+                        <input type="file" id="xdaTanFileImg" onchange="xmTanUploadImg(this);document.getElementById('J-total-price').innerText = 900;" accept="image/*"/>
                         <!--<input type="button" value="隐藏图片" onclick="document.getElementById('xmTanImg').style.display = 'none';"/>-->
                         <!--<input type="button" value="显示图片" onclick="document.getElementById('xmTanImg').style.display = 'block';"/>-->
                     </p>
@@ -245,7 +245,7 @@
                 <span class="">促销价：￥900/张 </span>
             </div>
             <div class="price-num">
-                总金额：￥900
+                总金额：￥ <span id="J-total-price">0</span>
             </div>
             <div class="price-handle">
                 <input type="submit" value="确认购买">
