@@ -253,6 +253,40 @@
             text-align: center;
         }
     </style>
+    <style>
+        .pop-wrap {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, .4);
+            z-index: 999;
+        }
+        .pop {
+            box-sizing: border-box;
+            padding: 30px 50px;
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,.5);
+            text-align: center;
+        }
+        .pop-handle a {
+            display: inline-block;
+            padding: 5px 20px;
+            color: #fff;
+            background-color: #36a9e2;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .pop-main p:last-of-type {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
 <div class="nav-wrap">
@@ -305,7 +339,7 @@
                 <label for="">上传设计图 :</label>
                 <div>
                     <p>
-                        <input type="file" id="xdaTanFileImg" onchange="xmTanUploadImg(this);document.getElementById('J-total-price').innerText = 1500;" accept="image/*"/>
+                        <input type="file" id="xdaTanFileImg" onchange="xmTanUploadImg(this);document.getElementById('J-total-price').innerText = 1500;document.getElementById('submit').removeAttribute('disabled');" accept="image/*"/>
                         <!--<input type="button" value="隐藏图片" onclick="document.getElementById('xmTanImg').style.display = 'none';"/>-->
                         <!--<input type="button" value="显示图片" onclick="document.getElementById('xmTanImg').style.display = 'block';"/>-->
                     </p>
@@ -335,13 +369,25 @@
                 总金额：￥ <span id="J-total-price">0</span>
             </div>
             <div class="price-handle">
-                <input type="submit" value="确认购买">
+                <input type="submit" id="submit" value="确认购买" onclick="document.getElementById('pop').style.display='flex';">
             </div>
         </div>
     </div>
 </div>
 <div class="foot">
     科昂超能科技有限公司 | 2016 ~ 2018 | 客服QQ:546445830
+</div>
+<div class="pop-wrap" id="pop" style="display: none;">
+    <div class="pop">
+        <div class="pop-main">
+            <p>1 * ￥1500  -----  ￥1500</p>
+            <p>总金额：￥1500</p>
+            <br>
+        </div>
+        <div class="pop-handle">
+            <input type="submit" onclick="document.getElementById('pop').style.display='none';" value="付款">
+        </div>
+    </div>
 </div>
 
 <!-- Optional JavaScript -->

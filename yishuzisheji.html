@@ -282,6 +282,40 @@
             font-size: 14px;
         }
     </style>
+    <style>
+        .pop-wrap {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, .4);
+            z-index: 999;
+        }
+        .pop {
+            box-sizing: border-box;
+            padding: 30px 50px;
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,.5);
+            text-align: center;
+        }
+        .pop-handle a {
+            display: inline-block;
+            padding: 5px 20px;
+            color: #fff;
+            background-color: #36a9e2;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+        .pop-main p:last-of-type {
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
 <div class="nav-wrap">
@@ -356,7 +390,7 @@
                 总金额：￥<span id="J-total-num">0</span>
             </div>
             <div class="price-handle">
-                <input type="submit" value="确认购买">
+                <input type="submit" id="submit" value="确认购买" onclick="document.getElementById('pop').style.display='flex';" disabled>
             </div>
         </div>
     </div>
@@ -364,6 +398,18 @@
 </div>
 <div class="foot">
     科昂超能科技有限公司 | 2016 ~ 2018 | 客服QQ:546445830
+</div>
+<div class="pop-wrap" id="pop" style="display: none;">
+    <div class="pop">
+        <div class="pop-main">
+            <p><span id="font-num"></span> * ￥120  -----  ￥<span id="total-money2"></span></p>
+            <p>总金额：￥<span id="total-money"></span></p>
+            <br>
+        </div>
+        <div class="pop-handle">
+            <input type="submit" onclick="document.getElementById('pop').style.display='none';" value="付款">
+        </div>
+    </div>
 </div>
 
 <!-- Optional JavaScript -->
@@ -422,8 +468,21 @@
 <script>
     function calculation() {
         var length = document.getElementById('J-design-font').value.length;
-        document.getElementById('J-font-num').innerText = length;
-        document.getElementById('J-total-num').innerText = length * 120;
+        if (length) {
+            document.getElementById('submit').removeAttribute('disabled');
+            document.getElementById('J-font-num').innerText = length;
+            document.getElementById('J-total-num').innerText = length * 120;
+            document.getElementById('font-num').innerText = length;
+            document.getElementById('total-money').innerText = length * 120;
+            document.getElementById('total-money2').innerText = length * 120;
+        } else {
+            document.getElementById('submit').disabled = true;
+            document.getElementById('J-font-num').innerText = 0;
+            document.getElementById('J-total-num').innerText = 0;
+            document.getElementById('font-num').innerText = 0;
+            document.getElementById('total-money').innerText = 0;
+            document.getElementById('total-money2').innerText = 0;
+        }
     }
 </script>
 </body>
