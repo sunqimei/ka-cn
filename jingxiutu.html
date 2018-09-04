@@ -183,8 +183,8 @@
         .pop {
             box-sizing: border-box;
             padding: 30px 50px;
-            width: 300px;
-            height: 200px;
+            width: 500px;
+            height: 300px;
             background-color: #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,.5);
             text-align: center;
@@ -293,12 +293,14 @@
 <div class="pop-wrap" id="pop" style="display: none;">
     <div class="pop">
         <div class="pop-main">
+            <p><label>收货地址：</label><input type="text" id="address"></p>
+            <p><label>邮　　箱：</label><input type="text" id="email" size="20"></p>
             <p>1 * ￥900  -----  ￥900</p>
             <p>总金额：￥900</p>
             <br>
         </div>
         <div class="pop-handle">
-            <input type="submit" onclick="document.getElementById('pop').style.display='none';" value="付款">
+            <input type="submit" onclick="validate();" value="付款">
         </div>
     </div>
 </div>
@@ -354,6 +356,24 @@
         };
 
         reader.readAsDataURL(file)
+    }
+
+    function validate() {
+        var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");
+        var address = document.getElementById("address").value;
+        var at = document.getElementById("email").value;
+        if (address == '') {
+            alert("请输入地址");
+            return false
+        } else if(at === ""){
+            alert("请输入邮箱");
+            return false;
+        } else if(!reg.test(at)){ //正则验证不通过，格式不对
+            alert("邮箱验证不通过!");
+            return false;
+        } else {
+            document.getElementById('pop').style.display='none';
+        }
     }
 </script>
 </body>
